@@ -194,6 +194,9 @@ input:first-child {
   border-radius: 4px;
   padding: 9px 0 0 9px; }
 
+textarea {
+  color: #000; }
+
 /* ==|====================
  Partials/Modules/Btn
 

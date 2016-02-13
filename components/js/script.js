@@ -10,7 +10,7 @@ appInventario.administrador = function(){
     new Producto("Jabon" , 70 , 500, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex."),
     new Producto("Pepsi" , 35000 , 1000, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex."),
     new Producto("Atun" , 50 , 1000, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex.") 
-  ];
+  ]; 
 
   function listarProductos(){
     var contenido ="";
