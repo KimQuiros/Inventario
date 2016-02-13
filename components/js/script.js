@@ -3,13 +3,13 @@
 appInventario.administrador = function(){
 	//lista inicial de productos
   var productos = [
-    new Producto("Camisetas" , 40 , 5000, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex."),
-    new Producto("Galletas" , 10 , 150, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex."), 
-    new Producto("Ropa" , 500 , 3000, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex."),
-    new Producto("Cereal" , 1000 , 1500, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex."),
-    new Producto("Jabon" , 70 , 500, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex."),
-    new Producto("Pepsi" , 35000 , 1000, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex."),
-    new Producto("Atun" , 50 , 1000, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex.") 
+    new Producto("Camisetas" , 40 , 5000, 120, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex."),
+    new Producto("Galletas" , 10 , 150, 130, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex."), 
+    new Producto("Ropa" , 500 , 3000, 140, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex."),
+    new Producto("Cereal" , 1000 , 1500, 150, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex."),
+    new Producto("Jabon" , 70 , 500, 160, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex."),
+    new Producto("Pepsi" , 35000 , 1000, 170, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex."),
+    new Producto("Atun" , 50 , 1000, 180, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in magna ex.") 
   ]; 
 
   function listarProductos(){
@@ -21,6 +21,9 @@ appInventario.administrador = function(){
   }
 
   return{
+    listarTodos: function(){
+      listarProductos(productos);
+    },
     buscarProducto: function(n){
       if(typeof n === "string"){
         for(var i= 0; i< productos.length; i ++){
@@ -31,21 +34,14 @@ appInventario.administrador = function(){
         }
       }
     },
-    agregarProducto: function(n, c, p, d){
+    agregarProducto: function(){
       nombre = document.getElementById("nombre").value;
       cantidad = document.getElementById("precio").value;
       precio = document.getElementById("cantidad").value;
       detalles = document.getElementById("detalles").value;
-      productos.push(new Producto(nombre, cantidad, precio, detalles));
+      codigo = document.getElementById("code").value;
+      productos.push(new Producto(nombre, cantidad, precio, codigo, detalles));
       listarProductos(productos); 
-    },
-    eliminarProducto: function(n){
-      for(i=0; i < productos.length; i++){
-        if(n === productos[i].nombre){
-          productos.splice(i,1);
-          AppInventario.administrador.listarTodos(i);
-        }
-      }
     },
     imprimirProducto : function(k){
       var contentProductos = "";
@@ -55,26 +51,33 @@ appInventario.administrador = function(){
           +productos[i].nombre+'.jpg></div> <div class="content-information col-md-6"><h2>'
           +productos[i].nombre+'</h2><p>Precio: '
           +productos[i].precio+'</p><p>Cantidad: '
-          +productos[i].cantidad+'</p><p class="detalles">Detalles: '
-          +productos[i].detalles+'</p><br/><button class="btn btn-group-sm glyphicon glyphicon-trash" onclick="appInventario.administrador.eliminarProducto("'+productos[i].nombre+'")"></button>';
+          +productos[i].cantidad+'</p><p class="Detalles">Detalles: '
+          +productos[i].detalles+'</p><p class="codigo">Codigo: '
+          +productos[i].code+'</p><br/><button class="btn btn-group-sm glyphicon glyphicon-trash" onclick="appInventario.administrador.eliminarProducto('+productos[i].code+')"></button>';
         }
       };
       document.getElementById('show-product').innerHTML = contentProductos;
     },
-    listarTodos: function(){
-      listarProductos(productos);
+    eliminarProducto: function(p){
+      for(i=0; i < productos.length; i++){
+        if(p === productos[i].code){
+          productos.splice(i,1);
+          AppInventario.administrador.listarTodos(i);
+        }
+      }
     },
     borrarTodos: function(){
-      productos.splice(new Producto(nombre, cantidad, precio, detalles));
+      productos.splice(new Producto(nombre, cantidad, precio, code, detalles));
       listarProductos(productos);      
     }
   }
 }(); 
-function Producto(n, c, p, d){
-  this.nombre = n;
-  this.cantidad = c;
-  this.precio = p;
-  this.detalles = d;
+function Producto(nombre, cantidad, precio, code, detalles){
+  this.nombre = nombre;
+  this.cantidad = cantidad;
+  this.precio = precio;
+  this.code = code;
+  this.detalles = detalles;
 }
 appInventario.administrador.listarTodos();
  
