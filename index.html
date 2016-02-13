@@ -12,40 +12,40 @@
 		<link rel="icon" type="image/png" sizes="96x96" href="img/favicon.png">
 	</head>
 	<body> 
-		<header class='container-header jumbotron col-md-12'>
-		<h1>Inventario</h1>
+		<header class="header-container jumbotron col-md-12">
+			<h1>Inventario</h1>
 		</header><!--parte inicial-->
 
-		<section class="container-list jumbotron col-md-3">
-			<div class="content-list-title">
-				<h4 class="list-title">Lista de Productos</h4>
-				<button class="glyphicon glyphicon-trash btn btn-sm btn-delete-all " onclick="appInventario.administrador.borrarTodos()"></button>
+		<section class="list-container jumbotron col-md-3">
+			<div class="list-content-title">
+				<h3 class="list-title">Lista de Productos</h3>
+				<button class="btn-delete-all glyphicon glyphicon-trash btn btn-sm" onclick="appInventario.administrador.borrarTodos()"></button>
 			</div><!-- content-title -->
-			<div class="content-products-list">
-				<ul id="products-list" class="content-list">
+			<div class="list-content-products">
+				<ul id="products-list">
 				</ul><!--products-list-->
 			</div><!-- content-products-list -->
 		</section><!--container-list-->
 
-		<section id="show-product" class="container-show-product jumbotron col-md-8">	
+		<section id="show-product" class="product-container jumbotron col-md-8">	
+		<!-- Javascript -->
 		</section><!--container-show-product-->
 
-		<section class="container-form jumbotron col-md-8">
-		<div class="content-title col-md-12">
-			<h4 class="form-title">Agregar nuevos productos</h4>
-		</div><!-- content-title -->
-		<div class="content-inputs col-md-6">
-			<input id="nombre" type="text" class="form-control" value="" name="name" placeholder="Nombre" aria-describedby="basic-addon1">
-			<input id="precio" value="" name="precio" type="number" class="form-control" placeholder="Precio" aria-describedby="basic-addon1">
-			<input id="cantidad" type="number" class="form-control" value="" name="Cantidad" placeholder="Cantidad" aria-describedby="basic-addon1" value="">
-			<input id="code" type="number" class="form-control" value="" name="codigo" placeholder="Codigo" aria-describedby="basic-addon1" value="">
-		</div><!--info-->
-		<div class="content-details col-md-6">
-			<textarea name="detalles" id="detalles" class="details" cols="47" rows="7" placeholder="Detalles"></textarea>
-			<input id="btn-agregar" class="btn btn-group-sm" type="submit"  value="Agregar" onclick="appInventario.administrador.agregarProducto()" />
-		</div><!--detalle-->
-	</section><!--formulario-->
-
+		<section class="form-container jumbotron col-md-8">
+			<div class="form-content-title col-md-12">
+				<h3 class="form-title">Agregar nuevos productos</h3>
+			</div><!-- content-title -->
+			<div class="form-content-inputs col-md-6">
+				<input id="nombre" type="text" class="form-control" value="" name="name" placeholder="Nombre" aria-describedby="basic-addon1">
+				<input id="precio" value="" name="precio" type="number" class="form-control" placeholder="Precio" aria-describedby="basic-addon1">
+				<input id="cantidad" type="number" class="form-control" value="" name="Cantidad" placeholder="Cantidad" aria-describedby="basic-addon1" value="">
+				<input id="code" type="number" class="form-control" value="" name="codigo" placeholder="Codigo" aria-describedby="basic-addon1" value="">
+			</div><!--info-->
+			<div class="form-content-details col-md-6">
+				<textarea name="detalles" id="detalles" class="details" cols="47" rows="7" placeholder="Detalles"></textarea>
+				<input id="btn-agregar" class="btn btn-group-sm" type="submit"  value="Agregar" onclick="appInventario.administrador.agregarProducto()" />
+			</div><!--detalle-->
+		</section><!--formulario-->
 		<script type="text/javascript" src="js/script.min.js"></script>
 	</body>
 </html>

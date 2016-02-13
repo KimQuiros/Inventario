@@ -23,11 +23,6 @@ appInventario.administrador = function(){
   return{
     listarTodos: function(next){
       listarProductos(productos);
-      if(next === undefined || next > (productos.length-1)){
-        AppInventario.inventarioProductos.activeProduct(0);
-      }else{
-       AppInventario.inventarioProductos.activeProduct(next);
-      }
     },
     buscarProducto: function(n){
       if(typeof n === "string"){

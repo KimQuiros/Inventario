@@ -54,7 +54,8 @@ h2 {
 	color:$title-color;
 }
 
-h4{
+h3{
+	@include font-size(20);
 	color: $title-color;
 	font-family: $title;
 }
@@ -72,15 +73,15 @@ p{
 
 /* #Containers
    ========================================================================== */
-.container-list, 
-.container-show-product, 
-.container-form {
+.list-container, 
+.product-container, 
+.form-container {
 	background-color: $white;
 	box-shadow: 0 0 6px $dark-grey;
 	color: $white;
 }
 
-.container-show-product, 
-.container-form {
+.product-container, 
+.form-container {
 	float: right;
 }

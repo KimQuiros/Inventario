@@ -82,7 +82,9 @@ h2 {
   margin-top: 0;
   color: #00CCCB; }
 
-h4 {
+h3 {
+  font-size: 20px;
+  font-size: 2rem;
   color: #00CCCB;
   font-family: "Bitter", serif; }
 
@@ -97,15 +99,15 @@ p {
 
 /* #Containers
    ========================================================================== */
-.container-list,
-.container-show-product,
-.container-form {
+.list-container,
+.product-container,
+.form-container {
   background-color: #fff;
   box-shadow: 0 0 6px #5F5F5F;
   color: #fff; }
 
-.container-show-product,
-.container-form {
+.product-container,
+.form-container {
   float: right; }
 
 /* #Modules
@@ -118,7 +120,7 @@ p {
    ======================= */
 /* #Container header
    ========================================================================== */
-.container-header {
+.header-container {
   margin-bottom: 30px;
   background-color: #00CCCB;
   box-shadow: 0 0 6px #5F5F5F;
@@ -136,7 +138,7 @@ p {
   float: left;
   margin-top: 5px; }
 
-.content-products-list {
+.list-content-products {
   clear: both;
   padding-top: 14px; }
 
@@ -148,12 +150,10 @@ p {
   padding: 10px;
   color: #000;
   cursor: pointer; }
-
-.list-item:first-child {
-  padding-top: 0; }
-
-.list-item:hover {
-  color: #00CCCB; }
+  .list-item:first-child {
+    padding-top: 0; }
+  .list-item:hover {
+    color: #00CCCB; }
 
 /* ==|====================
  Partials/Modules/Products
@@ -163,7 +163,7 @@ p {
    ======================= */
 /* #Container Show Product
    ========================================================================== */
-.container-show-product {
+.product-container {
   height: 451px; }
 
 .content-information {
@@ -180,7 +180,7 @@ p {
    ======================= */
 /* #Container Form
    ========================================================================== */
-.form-title {
+.form-content-title {
   margin-bottom: 22px; }
 
 input {
