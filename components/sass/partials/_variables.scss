@@ -1,0 +1,28 @@
+/* ==|====================
+   Partials/Variables
+   -------INDEX--------
+   #Tipography
+   #Colors
+   #Max-content
+   ======================= */
+
+/* #Tipography
+   ========================================================================== */
+@import url(https://fonts.googleapis.com/css?family=Bitter); 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+$title:'Bitter', serif;
+$body:'Open Sans', sans-serif;
+
+/* #Colors
+   ========================================================================== */
+$title-color:#00CCCB;
+$btn-color:#FC9A86;
+$black:#000;
+$white:#fff;
+$grey:#f4f4f4;
+$dark-grey:#5F5F5F;
+
+/* #Max Content
+   ========================================================================== */
+$max-content:1200px;

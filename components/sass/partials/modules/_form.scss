@@ -1,0 +1,26 @@
+/* ==|====================
+ Partials/Modules/Form
+
+   -------INDEX--------
+   #Container Form
+   ======================= */
+
+/* #Container Form
+   ========================================================================== */
+.form-title {
+	margin-bottom: 22px;
+}
+
+input {
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 15px;
+}
+
+input:first-child{
+	margin-top: 0;
+}
+
+.details {
+	border-radius: 4px;
+	padding: 9px 0 0 9px;
+}

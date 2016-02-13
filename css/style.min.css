@@ -1,0 +1,214 @@
+/* ==|====================
+   -------INDEX--------
+	#Partials
+	#Modules
+   ======================= */
+/* #	Partials
+   ========================================================================== */
+/* ==|====================
+   Partials/Variables
+   -------INDEX--------
+   #Tipography
+   #Colors
+   #Max-content
+   ======================= */
+/* #Tipography
+   ========================================================================== */
+@import url(https://fonts.googleapis.com/css?family=Bitter);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+/* #Colors
+   ========================================================================== */
+/* #Max Content
+   ========================================================================== */
+/* ==|====================
+   Partials/Mixins
+   -------INDEX--------
+   #Font-size
+   #Button
+   #Breakpoints
+   ======================= */
+/* #Font-size
+ *-------------------------------------------------------*/
+/* #Button
+ *-------------------------------------------------------
+ *style of the buttons
+ */
+/* #Breakpoints
+ *-------------------------------------------------------*/
+/* ==|====================
+ Partials/Globals
+
+   -------INDEX--------
+   #Max Content
+   #Containers
+   ======================= */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: Arial, Verdana, sans-serif; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  background-color: #f4f4f4;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1200px; }
+
+ul {
+  padding: 0;
+  margin: 0; }
+
+ul li a {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+h1 {
+  color: #fff !important;
+  font-family: "Bitter", serif;
+  margin: 0;
+  text-align: center; }
+
+h2 {
+  font-family: "Bitter", serif;
+  margin-top: 0;
+  color: #00CCCB; }
+
+h4 {
+  color: #00CCCB;
+  font-family: "Bitter", serif; }
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4rem !important; }
+
+/* #Max Content
+   ========================================================================== */
+.max-content {
+  max-width: 1200px; }
+
+/* #Containers
+   ========================================================================== */
+.container-list,
+.container-show-product,
+.container-form {
+  background-color: #fff;
+  box-shadow: 0 0 6px #5F5F5F;
+  color: #fff; }
+
+.container-show-product,
+.container-form {
+  float: right; }
+
+/* #Modules
+   ========================================================================== */
+/* ==|====================
+ Partials/Modules/Header
+
+   -------INDEX--------
+   #Container header
+   ======================= */
+/* #Container header
+   ========================================================================== */
+.container-header {
+  margin-bottom: 30px;
+  background-color: #00CCCB;
+  box-shadow: 0 0 6px #5F5F5F;
+  background-size: 100%; }
+
+/* ==|====================
+ Partials/Modules/List
+
+   -------INDEX--------
+   #Container List
+   ======================= */
+/* #Container List
+   ========================================================================== */
+.list-title {
+  float: left;
+  margin-top: 5px; }
+
+.content-products-list {
+  clear: both;
+  padding-top: 14px; }
+
+.list-item {
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  border-bottom: 1px solid #f4f4f4;
+  padding: 10px;
+  color: #000;
+  cursor: pointer; }
+
+.list-item:first-child {
+  padding-top: 0; }
+
+.list-item:hover {
+  color: #00CCCB; }
+
+/* ==|====================
+ Partials/Modules/Products
+
+   -------INDEX--------
+   #Container Show Product
+   ======================= */
+/* #Container Show Product
+   ========================================================================== */
+.container-show-product {
+  height: 451px; }
+
+.content-information {
+  color: #000; }
+
+.img {
+  width: 100%; }
+
+/* ==|====================
+ Partials/Modules/Form
+
+   -------INDEX--------
+   #Container Form
+   ======================= */
+/* #Container Form
+   ========================================================================== */
+.form-title {
+  margin-bottom: 22px; }
+
+input {
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 15px; }
+
+input:first-child {
+  margin-top: 0; }
+
+.details {
+  border-radius: 4px;
+  padding: 9px 0 0 9px; }
+
+/* ==|====================
+ Partials/Modules/Btn
+
+   -------INDEX--------
+   #Btn Style
+   #Btn list
+   ======================= */
+/* #Btn style
+   ========================================================================== */
+.btn {
+  background-color: #FC9A86;
+  color: #fff; }
+
+/* #Btn List
+   ========================================================================== */
+.btn-delete-all {
+  float: right;
+  margin-top: 0; }
+
+/*# sourceMappingURL=style.min.css.map */

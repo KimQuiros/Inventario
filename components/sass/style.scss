@@ -1,0 +1,21 @@
+/* ==|====================
+   -------INDEX--------
+	#Partials
+	#Modules
+   ======================= */
+
+/* #	Partials
+   ========================================================================== */
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/globals";
+
+/* #Modules
+   ========================================================================== */
+@import "partials/modules/header";
+@import "partials/modules/list";
+@import "partials/modules/products";
+@import "partials/modules/form";
+@import "partials/modules/btn";
+
+

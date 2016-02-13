@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
+		<meta name="MobileOptimized" content="width">
+		<meta name="HandheldFriendly" content="true">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Inventario</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.min.css">
+		<link rel="icon" type="image/png" sizes="96x96" href="img/favicon.png">
+	</head>
+	<body>
+		<header class='container-header jumbotron col-md-12'>
+		<h1>Inventario</h1>
+		</header><!--parte inicial-->
+
+		<section class="container-list jumbotron col-md-3">
+			<div class="content-list-title">
+				<h4 class="list-title">Lista de Productos</h4>
+				<button class="glyphicon glyphicon-trash btn btn-sm btn-delete-all " onclick="appInventario.administrador.borrarTodos()"></button>
+			</div><!-- content-title -->
+			<div class="content-products-list">
+				<ul id="products-list" class="content-list">
+				</ul><!--products-list-->
+			</div><!-- content-products-list -->
+		</section><!--container-list-->
+
+		<section id="show-product" class="container-show-product jumbotron col-md-8">	
+		</section><!--container-show-product-->
+
+		<form class="container-form jumbotron col-md-8">
+		<div class="content-title col-md-12">
+			<h4 class="form-title">Agregar nuevos productos</h4>
+		</div><!-- content-title -->
+		<div class="content-inputs col-md-6">
+				<input id="nombre" type="text" class="form-control" placeholder="Nombre" aria-describedby="basic-addon1">
+				<input id="precio" type="number" class="form-control" placeholder="Precio" aria-describedby="basic-addon1">
+				<input id="cantidad" type="number" class="form-control" placeholder="Cantidad" aria-describedby="basic-addon1">
+			</div><!--info-->
+			<div class="content-details col-md-6">
+				<textarea name="detalles" id="detalles" class="details" cols="47" rows="7" placeholder="Detalles"></textarea>
+				<input id="btn-agregar" class="btn btn-group-sm" type="submit"  value="Agregar" onclick="appInventario.administrador.agregarProducto()" />
+			</div><!--detalle-->
+		</form><!--formulario-->
+
+		<script type="text/javascript" src="js/script.min.js"></script>
+	</body>
+</html>
