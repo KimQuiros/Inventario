@@ -21,8 +21,13 @@ appInventario.administrador = function(){
   }
 
   return{
-    listarTodos: function(){
+    listarTodos: function(next){
       listarProductos(productos);
+      if(next === undefined || next > (productos.length-1)){
+        AppInventario.inventarioProductos.activeProduct(0);
+      }else{
+       AppInventario.inventarioProductos.activeProduct(next);
+      }
     },
     buscarProducto: function(n){
       if(typeof n === "string"){
@@ -60,9 +65,9 @@ appInventario.administrador = function(){
     },
     eliminarProducto: function(p){
       for(i=0; i < productos.length; i++){
-        if(p === productos[i].code){
+        if(p == productos[i].code){
           productos.splice(i,1);
-          AppInventario.administrador.listarTodos(i);
+          appInventario.administrador.listarTodos(i);
         }
       }
     },
