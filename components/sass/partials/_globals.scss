@@ -41,6 +41,7 @@ a {
 }
 
 h1 {
+	@include font-size(30);
 	color: $white !important;
 	font-family: $title;
 	margin:0;

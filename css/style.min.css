@@ -70,6 +70,8 @@ a {
   text-decoration: none; }
 
 h1 {
+  font-size: 30px;
+  font-size: 3rem;
   color: #fff !important;
   font-family: "Bitter", serif;
   margin: 0;
